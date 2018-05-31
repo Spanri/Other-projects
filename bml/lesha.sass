@@ -1,0 +1,194 @@
+@font-face
+    font-family: 'head'
+    src: url('../font/head.ttf') format('ttf'), url('../font/head.woff') format('woff')
+    font-weight: normal
+    font-size: 35px
+@import url('https://fonts.googleapis.com/css?family=Exo+2:900|Marmelad')
+
+$blue: #243d41
+$dred: #9B1B1B
+
+body
+    margin: 0
+    background-color: white
+    font-family: 'head'
+    .nav
+        z-index: 1
+        background-color: $dred
+        text-decoration: none
+        color: white
+        position: fixed
+        top: 0px
+        transition: all 0.5s ease-in-out
+        .but
+            display: none
+            transition: all 0.2s ease-in-out
+            background-color: $dred
+            text-align: right
+            width: 100vw
+            font-size: 3vw
+            p
+                padding-right: 2vw
+                padding-top: 1vh
+        .ulmob
+            display: none
+            ul
+                margin-right: 2vw
+                text-align: right
+                padding: 0
+                list-style-type: none
+                a
+                    font-size: 3vw
+                    text-align: center
+        .ulscr
+            ul
+                display: grid
+                grid-template-columns: 70vw 13vw 10vw 7vw
+                list-style-type: none
+                padding: 0
+                margin: 0.5vw
+                    right: 0
+                    left: 0
+                li
+                    a
+                        text-align: center
+                        font-size: 1.2vw
+        a
+            color: white
+            font-size: 1vw
+            transition: all 0.2s ease-in-out
+            text-decoration: none
+            &:hover
+                text-decoration: none
+                transition: all 0.2s ease-in-out
+                padding-right: 1vh
+    .hero
+        display: grid
+        grid-template-rows: 40vh 6vw 4.5vw 48vh
+        margin: 0
+        background-image: url('../img/gray-head2.jpg')
+        background-size: auto 150%
+        color: white
+        text-align: center
+        text-shadow: 0 0 3em $blue
+        h2
+            font-size: 3vw
+            margin: 0
+        .p1
+            font-size: 2vw
+            margin: 0
+            position: relative
+            width: 60vw
+            left: -0.8vw
+            background-color: $dred
+            transform: skewX(-15deg)
+            p
+                margin-top: 0.6vw
+                transform: skewX(15deg)
+    .what
+        text-align: center
+        display: grid
+        margin: 0
+        grid-template-rows: 20vh 7vh 73vh
+        color: $dred
+        h2
+            font-size: 3vw
+        p
+            padding: 2.5vw
+            font-size: 1.2vw
+    .why
+        background-image: url('../img/gray-head2.jpg')
+        background-size: auto 150%
+        margin: 0
+        display: grid
+        grid-template-rows: 7vh 86vh 7vh
+        .why2
+            background-color: $dred
+            margin: 5%
+            display: grid
+            text-align: center
+            grid-template-rows: 2vh 7vh 73vh
+            color: white
+            h2
+                font-size: 3vw
+            p
+                padding: 2.5vw
+                font-size: 1.2vw
+                white-space: normal
+
+@media all and (min-width: 1200px)
+    body
+        .nav
+            .ulscr
+                display: grid
+                li
+                    font-size: 20px
+            .but
+                display: none
+            .ulmob
+                display: none !important
+        .hero
+            h2
+                font-size: 50px
+            p
+                font-size: 30px
+        .why
+            .why2 
+                h2 
+                    font-size: 45px
+                p
+                    font-size: 27px
+        .what 
+                h2 
+                    font-size: 45px
+                p
+                    font-size: 27px
+@media handheld and (max-width: 767px)
+    body
+        .nav
+            .ulscr
+                display: none
+            .but
+                display: block
+        .hero
+            grid-template-rows: 40vh 10vw 7vw 50vh
+            h2
+                font-size: 5vw
+            p
+                font-size: 3vw
+        .why
+            .why2 
+                h2 
+                    font-size: 5vw
+                p
+                    font-size: 2.7vw
+        .what 
+                h2 
+                    font-size: 5vw
+                p
+                    font-size: 2.7vw
+@media handheld and (max-width: 480px)
+    body
+        .nav
+            .ulscr
+                display: none
+            .but
+                display: block
+        .hero
+            grid-template-rows: 40vh 25vw 7vw 44vh
+            h2
+                font-size: 7vw
+            p
+                font-size: 4vw
+        .why
+            .why2 
+                h2 
+                    font-size: 7vw
+                p
+                    font-size: 3.7vw
+        .what 
+                h2 
+                    font-size: 7vw
+                p
+                    font-size: 3.7vw
+    

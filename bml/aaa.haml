@@ -1,0 +1,148 @@
+!!! 5
+%html
+    %head
+        %meta(charset="UTF-8")
+        %title Игра+сюрприз
+        %meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        %meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        %script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js")
+        %script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+        %link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet")
+        <style>
+            div.stylie {
+                animation-name: stylie-transform-keyframes;
+                animation-duration: 2000ms;
+                animation-delay: 0ms;
+                animation-fill-mode: forwards;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                transform-origin: 0 0;
+            }
+            @keyframes move2 {
+            0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            7.14% {transform:translate(-0.0991px, -50.6735px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            14.29% {transform:translate(-0.793px, -93.551px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            21.43% {transform:translate(-2.6764px, -128.6327px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            28.57% {transform:translate(-6.344px, -155.9184px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            35.71% {transform:translate(-12.3907px, -175.4082px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            42.86% {transform:translate(-21.4111px, -187.102px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            50% {transform:translate(-34px, -191px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+            100% {transform:translate(-122px, -224px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            }html::after { content: url(https://ga-beacon.appspot.com/UA-42910121-1/stylie?pixel); position: absolute; left: -999em; }
+
+            @keyframes move3 {
+            0% {transform:translate(0px, 0px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            7.14% {transform:translate(0.1924px, -52.2653px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            14.29% {transform:translate(1.5394px, -96.4898px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            21.43% {transform:translate(5.1953px, -132.6735px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            28.57% {transform:translate(12.3149px, -160.8163px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            35.71% {transform:translate(24.0525px, -180.9184px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            42.86% {transform:translate(41.5627px, -192.9796px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            50% {transform:translate(66px, -197px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);animation-timing-function: cubic-bezier(.25,.25,.75,.75);}
+            100% {transform:translate(118px, -216px) scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) translate(-50%, -50%);}
+            }html::after { content: url(https://ga-beacon.appspot.com/UA-42910121-1/stylie?pixel); position: absolute; left: -999em; }
+
+            @keyframes move{
+                to{
+                    top: +20vh;
+                }
+            }
+            body{
+                margin: 0;
+            }
+            button{
+                width: 100px;
+                height: 70px;
+                background: lightblue;
+                color: white;
+                border: 0;
+                border-radius: 5px;
+                padding: 1%;
+                font-size: 20px;
+                position: relative
+            }
+            div.salute{
+                background: rgba(119, 136, 153,0.6);
+                height: 100vh;
+                width: 100vw;
+                position: absolute;
+                z-index: 1;
+            }
+            div.word{
+                text-align: center;
+                font-size: 30px;
+                color: black;
+                position: absolute;
+                bottom: 50px;
+            }
+            img.l{
+                top:60vh;
+                left:40vw;
+                width:40px;
+                position: absolute;
+                animation: move2 2s infinite ease-in
+            }
+            img.cen{
+                top:60vh;
+                left:50vw;
+                width:40px;
+                position: absolute;
+                animation: move 2s infinite ease-out
+            }
+            img.r{
+                top:60vh;
+                left:60vw;
+                width:40px;
+                position: absolute;
+                animation: move3 2s infinite ease-in
+            }
+            @media all and (max-width: 768px){
+                div.word{
+                    font-size: 25px;
+                }
+            }
+        </style>
+    %body
+        .salute(style="display:none")
+            %img.l(src="img/circle.svg")
+            %img.cen(src="img/circle.svg")
+            %img.r(src="img/circle.svg")
+            .word.col-lg-12 Ты сделал целый круг, но ничего не произошло? На хоть салют
+        %button.hi Нажми меня
+        -# (style="display:none")
+        
+    %script
+        $(document).ready(function(){
+            $(".hi").mouseenter(function() {
+                var left = parseInt($("button").css('left').replace('px',''));
+                var top = parseInt($("button").css('top').replace('px',''));
+                var w = $(window).width();
+                var h = $(window).height();
+
+                if( (left+199)>w ) { 
+                    if( (top+139)>h ){
+                        $("button").css('left','-=100px');
+                        return;
+                    }
+                    $("button").css('top','+=70px');
+                    return;
+                }
+                if( (top+139)>h && left>99) {
+                    $("button").css('left','-=100px');
+                    return;
+                }
+                if( top>39 && left==0 ) {
+                    $("button").css('top','-=70px');
+                    if( top>39 && top<139){
+                        $(".salute").css('display','block');
+                    }
+                    return;
+                }
+                $("button").css('left','+=100px');
+                return;
+                
+            });
+        });
+            
+
+        
