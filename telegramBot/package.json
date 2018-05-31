@@ -1,0 +1,20 @@
+{
+  "name": "telegrambot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "mongoose": "^5.0.17",
+    "mongoose-bcrypt": "^1.5.1",
+    "mongoose-unique-validator": "^2.0.1"
+  },
+  "devDependencies": {
+    "node-telegram-bot-api": "^0.30.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
